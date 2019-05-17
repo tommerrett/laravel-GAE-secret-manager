@@ -18,13 +18,13 @@
     },
     "autoload": {
         "psr-4": {
-            "tommerrett\\laravel-gae-secret-manager\\": "src/"
+            "tommerrett\\LaravelGAESecretManager\\": "src/"
         }
     },
     "extra": {
     	"laravel": {
     	    "providers": [
-    	        "tommerrett\\laravel-gae-secret-manager\\GAESecretsServiceProvider"
+    	        "tommerrett\\lLaravelGAESecretManager\\GAESecretsServiceProvider"
     	    ]
     	}
 	}
