@@ -24,7 +24,7 @@
     "extra": {
     	"laravel": {
     	    "providers": [
-    	        "tommerrett\\lLaravelGAESecretManager\\GAESecretsServiceProvider"
+    	        "tommerrett\\LaravelGAESecretManager\\GAESecretsServiceProvider"
     	    ]
     	}
 	}
