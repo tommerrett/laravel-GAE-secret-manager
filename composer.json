@@ -1,0 +1,30 @@
+{
+    "name": "tommerrett/laravel-gae-secret-manager",
+    "description": "Manage secrets when deploying Laravel to Google App Engine (Standard or Flexible). Store all secrets in Google Datastore",
+    "keywords": [
+        "GAE",
+        "AppEngine",
+        "secret",
+        "laravel",
+        "lumen"
+		],
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "extra": {
+    	"laravel": {
+    	    "providers": [
+    	        "tommerrett\\laravel-gae-secret-manager\\GAESecretsServiceProvider"
+    	    ]
+    	}
+	},
+    "require": {
+        "php": ">=7.0.13",
+        "illuminate/cache": "5.2.* || 5.3.* || 5.4.* || 5.5.* || 5.6.* || 5.7.* || 5.8.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "tommerrett\\laravel-gae-secret-manager\\": "src/"
+        }
+    }
+}
