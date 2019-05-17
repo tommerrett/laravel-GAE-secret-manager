@@ -1,4 +1,4 @@
-# Laravel Google App Engine (GAE) Secret Manager #
+# Laravel Google App Engine (GAE) Datastore Secret Manager #
 Manage secrets when deploying Laravel to Google App Engine (Standard or Flexible). Store all secrets in Google Datastore.
 
 ## Installation
