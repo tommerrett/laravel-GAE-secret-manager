@@ -46,7 +46,7 @@ return [
     | Cache Enabled
     |--------------------------------------------------------------------------
     |
-    | Boolean if you would like to enable cache. Datastore requested can add an additional 100-250ms of latency to each request. It is reccomended to use caching to significantly reduce this latency.
+    | Boolean if you would like to enable cache. Datastore requests can add an additional 100-250ms of latency to each request. It is reccomended to use caching to significantly reduce this latency.
     |
     */
 
