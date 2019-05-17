@@ -36,7 +36,7 @@ class GAESecretsServiceProvider extends ServiceProvider
     
         $this->cacheStore = config('GAESecrets.cache-store', 'file');
         
-        $this->enabledEnvironments = config('GAESecrets.enabled-environments');
+        $this->enabledEnvironments = config('GAESecrets.enabled-environments', array());
     
     }
 
