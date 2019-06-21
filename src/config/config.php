@@ -75,4 +75,15 @@ return [
     */
 
     'cache-store' => 'file',
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Debugging
+    |--------------------------------------------------------------------------
+    |
+    | Enable debugging, latency introduced by this package on bootstrapping is calculated and logged to the system log (viewable in stackdriver)
+    |
+    */
+
+    'debug' => false,
 ];
