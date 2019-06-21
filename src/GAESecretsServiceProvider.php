@@ -21,6 +21,8 @@ class GAESecretsServiceProvider extends ServiceProvider
     protected $cacheStore;
 
     protected $enabledEnvironments;
+    
+    protected $debug;
 
     //Set variables on class construction from config
 
@@ -37,6 +39,8 @@ class GAESecretsServiceProvider extends ServiceProvider
         $this->cacheStore = config('GAESecrets.cache-store', 'file');
         
         $this->enabledEnvironments = config('GAESecrets.enabled-environments', array());
+        
+        $this->debug = config('GAESecrets.debug', false);
     
     }
 
@@ -68,6 +72,11 @@ class GAESecretsServiceProvider extends ServiceProvider
     protected function LoadSecrets()
     {
         //load vars from datastore to env
+        
+        if($this->debug)
+        {
+            $start = microtime(true);
+        }
 
         //Only run this if the evironment is enabled in the config
         if(in_array(env('APP_ENV'), $this->enabledEnvironments))
@@ -89,6 +98,12 @@ class GAESecretsServiceProvider extends ServiceProvider
             //Process variables in config that need updating
             $this->updateConfigs();
     
+        }
+        
+        if($this->debug)
+        {
+            $time_elapsed_secs = microtime(true) - $start;
+            error_log("Datastore secret request time: " . $time_elapsed_secs);
         }
     }
 
